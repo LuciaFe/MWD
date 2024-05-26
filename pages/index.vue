@@ -1,4 +1,9 @@
+<script setup lang="ts">
+const { cards } = await useCard()
+</script>
+
 <template>
-  <p class="text-black">Hello non tradotto</p>
-  <p>{{ $t('Hello') }}</p>
+  <div class="py-6 px-4">
+    <OrganismsGridCard :list="cards" />
+  </div>
 </template>
