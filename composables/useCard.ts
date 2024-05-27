@@ -1,10 +1,10 @@
-import type { Album } from '~/types/global'
+import type { Album, AlbumUser } from '~/types/global'
 
 export const useCard = async () => {
   const users = await useFetch('/api/users')
   const albums = await useFetch('/api/albums')
 
-  const albumPhoto = computed<Album['album']>(() => {
+  const albumPhoto = computed<Album[]>(() => {
     if (!albums.data.value) return []
     return albums.data.value.map((album, index) => {
       return {
@@ -15,7 +15,7 @@ export const useCard = async () => {
     })
   })
 
-  const albumUsers = computed<Album[]>(() => {
+  const albumUsers = computed<AlbumUser[]>(() => {
     if (!users.data.value || !albumPhoto.value) return []
 
     return users.data.value.map(user => {

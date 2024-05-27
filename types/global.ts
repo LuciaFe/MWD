@@ -1,10 +1,16 @@
+export type AlbumResponse = {
+  title: string
+  userId: number
+  id: number
+}
 export type Album = {
+  title: string
+  userId: number
+  photo: string
+}
+export type AlbumUser = {
   user: User
-  album: {
-    title: string
-    userId: number
-    photo: string
-  }[]
+  album: Album[]
 }
 export type User = {
   id: number

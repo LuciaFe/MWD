@@ -1,7 +1,7 @@
-import type { Album } from '~/types/global'
+import type { AlbumResponse } from '~/types/global'
 export default defineEventHandler(async () => {
   try {
-    const albums: Album[] = await $fetch(
+    const albums: AlbumResponse[] = await $fetch(
       'https://jsonplaceholder.typicode.com/albums',
       {
         method: 'GET',
