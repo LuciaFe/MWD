@@ -28,10 +28,6 @@ export const useCard = async () => {
 
   const cards = computed(() => mapAlbums(albumUsers.value))
 
-  // const allPostOfUser= ()=>{
-
-  // }
-
   const userInfo = async (userID: string) => {
     return await useFetch(`/api/user/${userID}`)
   }
