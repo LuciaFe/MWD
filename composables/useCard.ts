@@ -1,4 +1,5 @@
 import type { Album, AlbumUser } from '~/types/global'
+import type { CardProps } from '~/components/molecules/MoleculesCard.props'
 
 export const useCard = async () => {
   const users = await useFetch('/api/users')
@@ -26,11 +27,18 @@ export const useCard = async () => {
     })
   })
 
+  const mapAlbums = (albumsUsers: AlbumUser[]): CardProps[] => {
+    return albumsUsers.flatMap((el: AlbumUser) => {
+      return el.album.map(album => ({
+        name: el.user.name,
+        image: album.photo,
+        title: album.title,
+        id: album.userId.toString(),
+        username: el.user.username,
+      }))
+    })
+  }
   const cards = computed(() => mapAlbums(albumUsers.value))
-
-  // const allPostOfUser= ()=>{
-
-  // }
 
   const userInfo = async (userID: string) => {
     return await useFetch(`/api/user/${userID}`)
