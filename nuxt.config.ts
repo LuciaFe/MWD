@@ -16,4 +16,10 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: './assets/scss/app.scss',
   },
+  runtimeConfig: {
+    directus: {
+      url: '',
+      token: '',
+    },
+  },
 })
