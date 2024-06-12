@@ -29,6 +29,8 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
-  }
+    "vue-router": "^4.3.2",
+    "@nuxt/kit": "npm:@nuxt/kit-nightly@latest"
+  },
+  "packageManager": "pnpm@8.10.2+sha1.e0b68270e89c817ff88b7be62466a2128c53af02"
 }

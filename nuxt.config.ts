@@ -18,8 +18,18 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     directus: {
-      url: '',
-      token: '',
+      url: process.env.NUXT_DIRECTUS_URL,
+      token: process.env.NUXT_DIRECTUS_TOKEN,
     },
+  },
+
+  components: {
+    dirs: [
+      {
+        path: '~/components/cms',
+        global: true,
+      },
+      '~/components',
+    ],
   },
 })
