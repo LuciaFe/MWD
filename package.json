@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "@0no-co/graphqlsp": "^1.12.7",
+    "@formkit/nuxt": "^1.6.5",
     "@nuxt/image": "^1.0.0",
+    "@nuxt/kit": "npm:@nuxt/kit-nightly@latest",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/tailwindcss": "6.12.0",
     "@urql/core": "^5.0.4",
@@ -27,10 +29,12 @@
     "sass": "^1.77.2",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
+    "unplugin-auto-import": "0.16.6",
+    "unplugin-icons": "0.17.1",
+    "unplugin-vue-components": "0.25.2",
     "vite": "^5.2.11",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2",
-    "@nuxt/kit": "npm:@nuxt/kit-nightly@latest"
+    "vue-router": "^4.3.2"
   },
   "packageManager": "pnpm@8.10.2+sha1.e0b68270e89c817ff88b7be62466a2128c53af02"
 }
